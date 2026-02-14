@@ -31,9 +31,10 @@
   <Config Name="OIDC_REMOTE_USER_CLAIM" Target="OIDC_REMOTE_USER_CLAIM" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">preferred_username</Config>
   <Config Name="freshrss_extensions" Target="/var/www/FreshRSS/extensions" Default="/mnt/user/appdata/rss/extensions" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rss/extensions</Config>
   <Config Name="TRUSTED_PROXY" Target="TRUSTED_PROXY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="CRON_MIN" Target="CRON_MIN" Default="*/20" Mode="" Description="cron refresh every 20 mins" Type="Variable" Display="always" Required="false" Mask="false">*/20</Config>
+  <Config Name="CRON_MIN" Target="CRON_MIN" Default="15,45" Mode="" Description="cron refresh every 30 mins" Type="Variable" Display="always" Required="false" Mask="false">15,45</Config>
   <Config Name="freshrss_data" Target="/var/www/FreshRSS/data" Default="/mnt/user/appdata/rss" Mode="rw" Description="Persistent config files" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/rss/data</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
 </Container>
+
