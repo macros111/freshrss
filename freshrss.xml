@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="1">
+  <Name>freshrssrss</Name>
+  <Repository>freshrss/freshrss:latest</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/freshrss</Registry>
+  <Network></Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-freshrss/issues/new/choose</Support>
+  <Project>https://freshrss.org/</Project>
+  <Overview>Freshrss(https://freshrss.org/) is a free, self-hostable aggregator for rss feeds.</Overview>
+  <Category>Network:Web Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/main/unraid/freshrss.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/freshrss-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1771063491</DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <Requires/>
+  <Config Name="WebUI" Target="80" Default="80" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">80</Config>
+  <Config Name="OIDC_ENABLED" Target="OIDC_ENABLED" Default="1" Mode="" Description="enables OIDC, if you enter 0, disregard all other variables regarding OIDC" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="OIDC_CLIENT_ID" Target="OIDC_CLIENT_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="OIDC_CLIENT_SECRET" Target="OIDC_CLIENT_SECRET" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="OIDC_PROVIDER_METADATA_URL" Target="OIDC_PROVIDER_METADATA_URL" Default="" Mode="" Description="..../well-known/openid-configuration" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="OIDC_SCOPES" Target="OIDC_SCOPES" Default="openid email profile" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="OIDC_X_FORWARDED_HEADERS" Target="OIDC_X_FORWARDED_HEADERS" Default="X-Forwarded-Proto X-Forwarded-Host" Mode="" Description="one or more of the following with a space inbetween:Forwarded, X-Forwarded-Host, X-Forwarded-Port or X-Forwarded-Proto" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="OIDC_REMOTE_USER_CLAIM" Target="OIDC_REMOTE_USER_CLAIM" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">preferred_username</Config>
+  <Config Name="freshrss_extensions" Target="/var/www/FreshRSS/extensions" Default="/mnt/user/appdata/rss/extensions" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/rss/extensions</Config>
+  <Config Name="TRUSTED_PROXY" Target="TRUSTED_PROXY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CRON_MIN" Target="CRON_MIN" Default="*/20" Mode="" Description="cron refresh every 20 mins" Type="Variable" Display="always" Required="false" Mask="false">*/20</Config>
+  <Config Name="freshrss_data" Target="/var/www/FreshRSS/data" Default="/mnt/user/appdata/rss" Mode="rw" Description="Persistent config files" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/rss/data</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>
